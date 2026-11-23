@@ -1,8 +1,8 @@
 {
-  "status": "BOOTING",
+  "status": "LIVE",
   "engine": "rea-portal",
   "title": "Rea.Tools Portal Nexus",
-  "mcp_url": "",
-  "gui_url": "",
-  "updated_at": "2026-11-23T07:03:18Z"
+  "mcp_url": "https://immigrants-hazards-rev-august.trycloudflare.com/mcp",
+  "gui_url": "https://immigrants-hazards-rev-august.trycloudflare.com/",
+  "updated_at": "2026-11-23T07:03:54Z"
 }
