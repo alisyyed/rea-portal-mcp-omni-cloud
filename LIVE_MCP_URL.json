@@ -1,8 +1,8 @@
 {
-  "status": "LIVE",
+  "status": "BOOTING",
   "engine": "rea-portal",
   "title": "rea.tools Live Docs & Scraper Nexus",
-  "mcp_url": "https://dam-ecommerce-nat-eggs.trycloudflare.com/mcp",
-  "gui_url": "https://dam-ecommerce-nat-eggs.trycloudflare.com/",
-  "updated_at": "2026-11-23T04:42:03Z"
+  "mcp_url": "",
+  "gui_url": "",
+  "updated_at": "2026-11-23T06:27:33Z"
 }
