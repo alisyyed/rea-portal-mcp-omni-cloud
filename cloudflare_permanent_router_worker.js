@@ -1,12 +1,12 @@
 /**
  * 555 Universal Cloud MCP Foundry v4.0 - Zero-Cache Edge-Smart Worker Router
- * Engine: Methodology Engine (Https-Rea-Tools-Https) MCP (rea-portal)
+ * Engine: Rea.Tools Portal Nexus (rea-portal)
  */
 const GITHUB_API_LIVE_JSON_URL = "https://api.github.com/repos/alisyyed/rea-portal-mcp-omni-cloud/contents/LIVE_MCP_URL.json?ref=main";
 const GITHUB_RAW_LIVE_JSON_URL = "https://raw.githubusercontent.com/alisyyed/rea-portal-mcp-omni-cloud/main/LIVE_MCP_URL.json";
 const GITHUB_DISPATCH_URL = "https://api.github.com/repos/alisyyed/rea-portal-mcp-omni-cloud/actions/workflows/perpetual_relay.yml/dispatches";
 const AUTO_WAKE_GH_TOKEN = "";
-const EDGE_CURATED_TOOLS = [{"name": "methodology_status_and_smod_tree", "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Inspect SMod0-SMod9 hierarchy, SMd1a/b/c containers, and rules.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "methodology_predict_errors", "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Run pre-flight error prediction across nested sub-modules.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "methodology_revert_smod0_baseline", "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Revert state to clean SMod0 baseline upon constraint violation.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "methodology_obscura_fact_verify", "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Verify external claims via Obscura OmniNexus V8 engine.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "rea_portal_hexa_engine_bridge", "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.", "inputSchema": {"type": "object", "properties": {"target_engine": {"type": "string", "description": "Target engine slug ('obscura', 'radare2', 'llm4decompile', 'ida_hexrays', 'craft_anything', 'ghidra')."}, "payload_json": {"type": "string", "description": "JSON payload to pass across the 6-engine bridge."}}}}];
+const EDGE_CURATED_TOOLS = [{"name": "rea_portal_status_check", "description": "[Rea.Tools Portal Nexus] Check rea.tools uptime, HTTP status headers, and Obscura relay state.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "rea_portal_obscura_fetch_markdown", "description": "[Rea.Tools Portal Nexus] Render any URL on rea.tools via Obscura V8 and extract clean Markdown.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "rea_portal_parallel_scrape", "description": "[Rea.Tools Portal Nexus] Parallel-scrape multiple URLs on rea.tools via Obscura worker pool.", "inputSchema": {"type": "object", "properties": {"query": {"type": "string", "description": "Primary input query, URL, command, SQL statement, or text to process."}, "options_json": {"type": "string", "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."}}}}, {"name": "rea_portal_hexa_engine_bridge", "description": "[Rea.Tools Portal Nexus] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.", "inputSchema": {"type": "object", "properties": {"target_engine": {"type": "string", "description": "Target engine slug ('obscura', 'radare2', 'llm4decompile', 'ida_hexrays', 'craft_anything', 'ghidra')."}, "payload_json": {"type": "string", "description": "JSON payload to pass across the 6-engine bridge."}}}}];
 
 async function triggerGithubAutoWake() {
   if (!AUTO_WAKE_GH_TOKEN) return false;
@@ -90,7 +90,7 @@ async function handleEdgeFallbackJsonRpc(body, upstreamErr, liveData) {
           text: JSON.stringify({
             status: "EDGE_HYBRID_RESPONSE",
             engine: "rea-portal",
-            title: "Methodology Engine (Https-Rea-Tools-Https) MCP",
+            title: "Rea.Tools Portal Nexus",
             tool_called: tName,
             arguments_received: params.arguments || {},
             obscura_first_bridge: "https://obscura-mcp-forever.forested-lung.workers.dev/mcp",
@@ -151,7 +151,7 @@ export default {
         return new Response(JSON.stringify({
           status: "UNIVERSAL_WORKER_ONLINE",
           engine: "rea-portal",
-          title: "Methodology Engine (Https-Rea-Tools-Https) MCP",
+          title: "Rea.Tools Portal Nexus",
           active_backend_mcp_url: live.mcp_url,
           updated_at: live.updated_at
         }, null, 2), {
@@ -184,7 +184,7 @@ export default {
       return new Response(JSON.stringify({
         status: "AUTO_WAKING_CLOUD_RELAY",
         engine: "rea-portal",
-        title: "Methodology Engine (Https-Rea-Tools-Https) MCP",
+        title: "Rea.Tools Portal Nexus",
         live_json_state: live,
         message: "Signaled your 24/7 GitHub Cloud Relay to wake (~25s)."
       }, null, 2), {
