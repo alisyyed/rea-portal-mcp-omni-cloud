@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Auto-Generated 24/7 Cloud MCP Server for Methodology Engine (Https-Rea-Tools-Https) MCP (rea-portal)
+Auto-Generated 24/7 Cloud MCP Server for Rea.Tools Portal Nexus (rea-portal)
 Zero external pip dependencies required! Runs on pure Python 3 stdlib + cloudflared tunnel.
-Archetype: methodology_system | Target: [https://rea.tools/](https://rea.tools/)
+Archetype: website_portal | Target: https://rea.tools/
 """
 import argparse
 import http.server
@@ -22,15 +22,15 @@ import urllib.request
 from pathlib import Path
 
 ENGINE_SLUG = "rea-portal"
-DISPLAY_TITLE = "Methodology Engine (Https-Rea-Tools-Https) MCP"
-ARCHETYPE = "methodology_system"
-TARGET_SOURCE = "[https://rea.tools/](https://rea.tools/)"
-SYSTEM_RULES = "[https://rea.tools/](https://rea.tools/)"
+DISPLAY_TITLE = "Rea.Tools Portal Nexus"
+ARCHETYPE = "website_portal"
+TARGET_SOURCE = "https://rea.tools/"
+SYSTEM_RULES = "Route all scraping and DOM/API requests for https://rea.tools/ through Obscura OmniNexus V8 engine and return structured JSON/Markdown."
 OBSCURA_MCP_URL = "https://obscura-mcp-forever.forested-lung.workers.dev/mcp"
 CURATED_TOOLS = [
   {
-    "name": "methodology_status_and_smod_tree",
-    "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Inspect SMod0-SMod9 hierarchy, SMd1a/b/c containers, and rules.",
+    "name": "rea_portal_status_check",
+    "description": "[Rea.Tools Portal Nexus] Check rea.tools uptime, HTTP status headers, and Obscura relay state.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -46,8 +46,8 @@ CURATED_TOOLS = [
     }
   },
   {
-    "name": "methodology_predict_errors",
-    "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Run pre-flight error prediction across nested sub-modules.",
+    "name": "rea_portal_obscura_fetch_markdown",
+    "description": "[Rea.Tools Portal Nexus] Render any URL on rea.tools via Obscura V8 and extract clean Markdown.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -63,25 +63,8 @@ CURATED_TOOLS = [
     }
   },
   {
-    "name": "methodology_revert_smod0_baseline",
-    "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Revert state to clean SMod0 baseline upon constraint violation.",
-    "inputSchema": {
-      "type": "object",
-      "properties": {
-        "query": {
-          "type": "string",
-          "description": "Primary input query, URL, command, SQL statement, or text to process."
-        },
-        "options_json": {
-          "type": "string",
-          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
-        }
-      }
-    }
-  },
-  {
-    "name": "methodology_obscura_fact_verify",
-    "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Verify external claims via Obscura OmniNexus V8 engine.",
+    "name": "rea_portal_parallel_scrape",
+    "description": "[Rea.Tools Portal Nexus] Parallel-scrape multiple URLs on rea.tools via Obscura worker pool.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -98,7 +81,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_hexa_engine_bridge",
-    "description": "[Methodology Engine (Https-Rea-Tools-Https) MCP] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.",
+    "description": "[Rea.Tools Portal Nexus] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -115,10 +98,9 @@ CURATED_TOOLS = [
   }
 ]
 TOOL_MODES = {
-  "methodology_status_and_smod_tree": "rule_validator",
-  "methodology_predict_errors": "rule_validator",
-  "methodology_revert_smod0_baseline": "rule_validator",
-  "methodology_obscura_fact_verify": "obscura_scrape"
+  "rea_portal_status_check": "http_proxy",
+  "rea_portal_obscura_fetch_markdown": "obscura_scrape",
+  "rea_portal_parallel_scrape": "obscura_scrape"
 }
 
 
