@@ -1,8 +1,8 @@
 {
-  "status": "LIVE",
+  "status": "BOOTING",
   "engine": "rea-portal",
-  "title": "rea.tools Live Docs & Scraper Nexus",
-  "mcp_url": "https://dust-connectivity-fragrances-born.trycloudflare.com/mcp",
-  "gui_url": "https://dust-connectivity-fragrances-born.trycloudflare.com/",
-  "updated_at": "2026-11-23T06:28:15Z"
+  "title": "Methodology Engine (Https-Rea-Tools-Https) MCP",
+  "mcp_url": "",
+  "gui_url": "",
+  "updated_at": "2026-11-23T06:51:25Z"
 }
