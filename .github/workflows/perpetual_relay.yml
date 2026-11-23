@@ -1,4 +1,4 @@
-name: 24x7 Perpetual Cloud MCP Relay (rea.tools Live Docs & Scraper Nexus)
+name: 24x7 Perpetual Cloud MCP Relay (Methodology Engine (Https-Rea-Tools-Https) MCP)
 
 on:
   workflow_dispatch:
@@ -23,7 +23,7 @@ jobs:
       - name: 1. Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 2. Boot rea.tools Live Docs & Scraper Nexus 24/7 Cloud MCP Server, Publish LIVE_MCP_URL.json & Keep Alive (5h Window)
+      - name: 2. Boot Methodology Engine (Https-Rea-Tools-Https) MCP 24/7 Cloud MCP Server, Publish LIVE_MCP_URL.json & Keep Alive (5h Window)
         env:
           RUNNER_TRACKING_ID: ""
         run: |
@@ -55,7 +55,7 @@ jobs:
             echo "ERROR: Cloudflare Quick Tunnel did not publish URL within 120s"
             exit 1
           fi
-          echo "rea.tools Live Docs & Scraper Nexus 24/7 Cloud MCP Relay is LIVE! Holding tunnel open for 5 hours..."
+          echo "Methodology Engine (Https-Rea-Tools-Https) MCP 24/7 Cloud MCP Relay is LIVE! Holding tunnel open for 5 hours..."
           sleep 18000
 
       - name: 3. Perpetual Self-Respawn
