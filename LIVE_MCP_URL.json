@@ -1,8 +1,8 @@
 {
-  "status": "BOOTING",
+  "status": "LIVE",
   "engine": "rea-portal",
   "title": "Methodology Engine (Https-Rea-Tools-Https) MCP",
-  "mcp_url": "",
-  "gui_url": "",
-  "updated_at": "2026-11-23T06:51:25Z"
+  "mcp_url": "https://couple-economy-afterwards-launches.trycloudflare.com/mcp",
+  "gui_url": "https://couple-economy-afterwards-launches.trycloudflare.com/",
+  "updated_at": "2026-11-23T06:51:56Z"
 }
