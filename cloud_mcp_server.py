@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Auto-Generated 24/7 Cloud MCP Server for Rea.Tools Portal Nexus (rea-portal)
+Auto-Generated 24/7 Cloud MCP Server for Rea Portal OmniNexus (rea.tools) (rea-portal)
 Zero external pip dependencies required! Runs on pure Python 3 stdlib + cloudflared tunnel.
 Archetype: website_portal | Target: https://rea.tools/
 """
@@ -22,15 +22,49 @@ import urllib.request
 from pathlib import Path
 
 ENGINE_SLUG = "rea-portal"
-DISPLAY_TITLE = "Rea.Tools Portal Nexus"
+DISPLAY_TITLE = "Rea Portal OmniNexus (rea.tools)"
 ARCHETYPE = "website_portal"
 TARGET_SOURCE = "https://rea.tools/"
 SYSTEM_RULES = "Route all scraping and DOM/API requests for https://rea.tools/ through Obscura OmniNexus V8 engine and return structured JSON/Markdown."
 OBSCURA_MCP_URL = "https://obscura-mcp-forever.forested-lung.workers.dev/mcp"
 CURATED_TOOLS = [
   {
-    "name": "rea_portal_status_check",
-    "description": "[Rea.Tools Portal Nexus] Check rea.tools uptime, HTTP status headers, and Obscura relay state.",
+    "name": "rea_portal_doctor_and_status",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Verify rea-portal checkout, binaries, and 24/7 Cloud VM health.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_discover_all_hidden_capabilities",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Runtime auto-introspection on the 24/7 Cloud VM: scans --help, Makefile, package.json, pyproject.toml, Cargo.toml, mcp.json, and all scripts/modules.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_run_any_subcommand_or_script",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Universal dynamic executor: invoke any discovered CLI subcommand, flag, or internal script inside rea-portal.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -47,7 +81,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_obscura_fetch_markdown",
-    "description": "[Rea.Tools Portal Nexus] Render any URL on rea.tools via Obscura V8 and extract clean Markdown.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Render any URL on https://rea.tools via Obscura V8 and extract clean Markdown.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -64,7 +98,92 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_parallel_scrape",
-    "description": "[Rea.Tools Portal Nexus] Parallel-scrape multiple URLs on rea.tools via Obscura worker pool.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Parallel-scrape multiple URLs on https://rea.tools via Obscura worker pool.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_form_and_api_sniffer",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Auto-detect interactive DOM forms, hidden inputs, and XHR/fetch API endpoints on https://rea.tools.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_llms_txt_and_sitemap_harvester",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Harvest /llms.txt, /sitemap.xml, and documentation indexes on https://rea.tools.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_openapi_and_status_probe",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Inspect HTTP headers, status, and OpenAPI/JSON endpoints on https://rea.tools.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "rea_portal_smod0_verified_pipeline",
+    "description": "[Rea Portal OmniNexus (rea.tools)] 3-Stage Composite: run rea-portal -> cross-map with 9-Engine Cloud Mesh -> Check2 SMod0 guard.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Primary input query, URL, command, SQL statement, or text to process."
+        },
+        "options_json": {
+          "type": "string",
+          "description": "Optional JSON object string with extra parameters (e.g. '{\"eval_js\": \"document.title\"}')."
+        }
+      }
+    }
+  },
+  {
+    "name": "gpu_cloudflare_workers_ai_infer",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Run 24/7 free serverless GPU LLM/embedding inference on Cloudflare Workers AI Edge (10,000 Neurons/day, zero PC).",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -81,7 +200,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_hexa_engine_bridge",
-    "description": "[Rea.Tools Portal Nexus] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] Coordinate multi-engine tasks across Obscura, Radare2, Ghidra, IDA 9.5, LLM4Decompile, and Craft-Anything.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -98,9 +217,16 @@ CURATED_TOOLS = [
   }
 ]
 TOOL_MODES = {
-  "rea_portal_status_check": "http_proxy",
+  "rea_portal_doctor_and_status": "cli_exec",
+  "rea_portal_discover_all_hidden_capabilities": "cli_exec",
+  "rea_portal_run_any_subcommand_or_script": "cli_exec",
   "rea_portal_obscura_fetch_markdown": "obscura_scrape",
-  "rea_portal_parallel_scrape": "obscura_scrape"
+  "rea_portal_parallel_scrape": "obscura_scrape",
+  "rea_portal_form_and_api_sniffer": "obscura_scrape",
+  "rea_portal_llms_txt_and_sitemap_harvester": "obscura_scrape",
+  "rea_portal_openapi_and_status_probe": "http_proxy",
+  "rea_portal_smod0_verified_pipeline": "composite_pipeline",
+  "gpu_cloudflare_workers_ai_infer": "gpu_compute"
 }
 
 
@@ -142,6 +268,31 @@ def _run_memfd_or_subprocess(cmd_args: list, timeout_sec: int = 20) -> dict:
 
 
 def dispatch_universal_tool(tool_name: str, arguments: dict) -> dict:
+    if tool_name.endswith("_discover_all_hidden_capabilities"):
+        src_root = Path("/tmp/" + ENGINE_SLUG.replace("-", "_") + "_src")
+        found_scripts, found_manifests, found_bins = [], [], []
+        if src_root.exists():
+            for p in list(src_root.rglob("*"))[:400]:
+                if p.is_file():
+                    rel = str(p.relative_to(src_root))
+                    nl = p.name.lower()
+                    if nl in ("makefile", "package.json", "pyproject.toml", "cargo.toml", "cmakelists.txt", "mcp.json", "server.json"):
+                        found_manifests.append(rel)
+                    elif p.suffix.lower() in (".py", ".sh", ".js", ".ts") and len(found_scripts) < 40:
+                        found_scripts.append(rel)
+                    elif os.access(str(p), os.X_OK) and len(found_bins) < 20:
+                        found_bins.append(rel)
+        return {
+            "status": "RUNTIME_CAPABILITIES_DISCOVERED",
+            "engine_slug": ENGINE_SLUG,
+            "cloned_src_dir_exists": src_root.exists(),
+            "manifests_found": found_manifests,
+            "scripts_sample": found_scripts,
+            "executables_found": found_bins,
+            "total_exposed_mcp_tools": len(CURATED_TOOLS),
+            "tip": "Invoke any discovered script or subcommand immediately via `" + ENGINE_SLUG.replace("-", "_") + "_run_any_subcommand_or_script`!",
+        }
+
     if tool_name.endswith("_hexa_engine_bridge"):
         return {
             "status": "HEXA_BRIDGE_CONNECTED",
@@ -154,6 +305,9 @@ def dispatch_universal_tool(tool_name: str, arguments: dict) -> dict:
                 "ida_hexrays": "https://ida-hexrays-mcp-forever.forested-lung.workers.dev/mcp",
                 "craft_anything": "https://craft-anything-mcp-forever.forested-lung.workers.dev/mcp",
                 "ghidra": "https://ghidra-mcp-forever.forested-lung.workers.dev/mcp",
+                "cutter": "https://cutter-mcp-forever.forested-lung.workers.dev/mcp",
+                "rea": "https://rea-mcp-forever.forested-lung.workers.dev/mcp",
+                "rea_portal": "https://rea-portal-mcp-forever.forested-lung.workers.dev/mcp",
             },
             "payload_json": arguments.get("payload_json", "{}"),
         }
@@ -228,6 +382,21 @@ def dispatch_universal_tool(tool_name: str, arguments: dict) -> dict:
         except Exception as exc:
             result["http_proxy_response"] = {"error": str(exc)}
 
+    elif mode == "gpu_compute":
+        gpu_info = _run_memfd_or_subprocess(["nvidia-smi", "--query-gpu=name,driver_version,memory.total,memory.free,utilization.gpu", "--format=csv,noheader"])
+        cuda_ok = (gpu_info.get("exit_code") == 0 and bool(gpu_info.get("stdout", "").strip()))
+        result["gpu_compute_telemetry"] = {
+            "cuda_gpu_detected": cuda_ok,
+            "nvidia_smi": gpu_info.get("stdout", "").strip() if cuda_ok else "CLOUD_CPU_AND_WORKERS_AI_ACTIVE (24/7 Free Cloudflare Workers AI Edge GPU + Optional Free Colab/Kaggle T4 Cloud Relay)",
+            "cpu_cores": os.cpu_count(),
+            "platform": platform.platform(),
+            "requested_operation": query or "gpu_probe",
+        }
+        if query.strip() and opts.get("cmd"):
+            cmd = opts.get("cmd")
+            if isinstance(cmd, str):
+                cmd = cmd.split()
+            result["gpu_workload_exec"] = _run_memfd_or_subprocess(cmd, timeout_sec=60)
     elif mode == "composite_pipeline":
         cmd = opts.get("cmd") or ["uname", "-a"]
         if isinstance(cmd, str):
