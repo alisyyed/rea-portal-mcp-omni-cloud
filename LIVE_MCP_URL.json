@@ -1,8 +1,8 @@
 {
-  "status": "BOOTING",
+  "status": "LIVE",
   "engine": "rea-portal",
   "title": "Rea Portal OmniNexus (rea.tools)",
-  "mcp_url": "",
-  "gui_url": "",
-  "updated_at": "2026-11-27T20:14:39Z"
+  "mcp_url": "https://mid-britain-spine-ocean.trycloudflare.com/mcp",
+  "gui_url": "https://mid-britain-spine-ocean.trycloudflare.com/",
+  "updated_at": "2026-11-27T20:15:20Z"
 }
