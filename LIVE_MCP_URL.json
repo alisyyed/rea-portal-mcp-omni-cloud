@@ -1,8 +1,8 @@
 {
-  "status": "LIVE",
+  "status": "BOOTING",
   "engine": "rea-portal",
   "title": "Rea Portal OmniNexus (rea.tools)",
-  "mcp_url": "https://gst-locally-response-movies.trycloudflare.com/mcp",
-  "gui_url": "https://gst-locally-response-movies.trycloudflare.com/",
-  "updated_at": "2026-11-27T19:25:56Z"
+  "mcp_url": "",
+  "gui_url": "",
+  "updated_at": "2026-11-27T20:14:39Z"
 }
