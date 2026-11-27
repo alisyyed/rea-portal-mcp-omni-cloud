@@ -1,8 +1,8 @@
 {
-  "status": "LIVE",
+  "status": "BOOTING",
   "engine": "rea-portal",
-  "title": "Rea.Tools Portal Nexus",
-  "mcp_url": "https://month-ports-attorneys-ntsc.trycloudflare.com/mcp",
-  "gui_url": "https://month-ports-attorneys-ntsc.trycloudflare.com/",
-  "updated_at": "2026-11-27T13:00:48Z"
+  "title": "Rea Portal OmniNexus (rea.tools)",
+  "mcp_url": "",
+  "gui_url": "",
+  "updated_at": "2026-11-27T15:11:23Z"
 }
