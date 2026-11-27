@@ -1,8 +1,8 @@
 {
-  "status": "BOOTING",
+  "status": "LIVE",
   "engine": "rea-portal",
   "title": "Rea Portal OmniNexus (rea.tools)",
-  "mcp_url": "",
-  "gui_url": "",
-  "updated_at": "2026-11-27T15:11:23Z"
+  "mcp_url": "https://closed-influenced-won-salaries.trycloudflare.com/mcp",
+  "gui_url": "https://closed-influenced-won-salaries.trycloudflare.com/",
+  "updated_at": "2026-11-27T15:11:56Z"
 }
