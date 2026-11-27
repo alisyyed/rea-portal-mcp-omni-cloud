@@ -30,7 +30,7 @@ OBSCURA_MCP_URL = "https://obscura-mcp-forever.forested-lung.workers.dev/mcp"
 CURATED_TOOLS = [
   {
     "name": "rea_portal_doctor_and_status",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Verify rea-portal checkout, binaries, and 24/7 Cloud VM health.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Verify rea-portal checkout, binaries, and 24/7 Cloud VM health.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -47,7 +47,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_discover_all_hidden_capabilities",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Runtime auto-introspection on the 24/7 Cloud VM: scans --help, Makefile, package.json, pyproject.toml, Cargo.toml, mcp.json, and all scripts/modules.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Runtime auto-introspection on the 24/7 Cloud VM: scans --help, Makefile, package.json, pyproject.toml, Cargo.toml, mcp.json, and all scripts/modules.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -64,7 +64,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_run_any_subcommand_or_script",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Universal dynamic executor: invoke any discovered CLI subcommand, flag, or internal script inside rea-portal.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Universal dynamic executor: invoke any discovered CLI subcommand, flag, or internal script inside rea-portal.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -81,7 +81,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_obscura_fetch_markdown",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Render any URL on https://rea.tools via Obscura V8 and extract clean Markdown.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Render any URL on https://rea.tools via Obscura V8 and extract clean Markdown.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -98,7 +98,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_parallel_scrape",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Parallel-scrape multiple URLs on https://rea.tools via Obscura worker pool.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Parallel-scrape multiple URLs on https://rea.tools via Obscura worker pool.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -115,7 +115,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_form_and_api_sniffer",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Auto-detect interactive DOM forms, hidden inputs, and XHR/fetch API endpoints on https://rea.tools.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Auto-detect interactive DOM forms, hidden inputs, and XHR/fetch API endpoints on https://rea.tools.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -132,7 +132,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_llms_txt_and_sitemap_harvester",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Harvest /llms.txt, /sitemap.xml, and documentation indexes on https://rea.tools.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Harvest /llms.txt, /sitemap.xml, and documentation indexes on https://rea.tools.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -149,7 +149,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_openapi_and_status_probe",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Inspect HTTP headers, status, and OpenAPI/JSON endpoints on https://rea.tools.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Inspect HTTP headers, status, and OpenAPI/JSON endpoints on https://rea.tools.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -166,7 +166,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "rea_portal_smod0_verified_pipeline",
-    "description": "[Rea Portal OmniNexus (rea.tools)] 3-Stage Composite: run rea-portal -> cross-map with 9-Engine Cloud Mesh -> Check2 SMod0 guard.",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] 3-Stage Composite: run rea-portal -> cross-map with 9-Engine Cloud Mesh -> Check2 SMod0 guard.",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -183,7 +183,7 @@ CURATED_TOOLS = [
   },
   {
     "name": "gpu_cloudflare_workers_ai_infer",
-    "description": "[Rea Portal OmniNexus (rea.tools)] Run 24/7 free serverless GPU LLM/embedding inference on Cloudflare Workers AI Edge (10,000 Neurons/day, zero PC).",
+    "description": "[Rea Portal OmniNexus (rea.tools)] [Rea Portal OmniNexus (rea.tools)] Run 24/7 free serverless GPU LLM/embedding inference on Cloudflare Workers AI Edge (10,000 Neurons/day, zero PC).",
     "inputSchema": {
       "type": "object",
       "properties": {
@@ -221,11 +221,11 @@ TOOL_MODES = {
   "rea_portal_discover_all_hidden_capabilities": "cli_exec",
   "rea_portal_run_any_subcommand_or_script": "cli_exec",
   "rea_portal_obscura_fetch_markdown": "obscura_scrape",
-  "rea_portal_parallel_scrape": "obscura_scrape",
-  "rea_portal_form_and_api_sniffer": "obscura_scrape",
-  "rea_portal_llms_txt_and_sitemap_harvester": "obscura_scrape",
-  "rea_portal_openapi_and_status_probe": "http_proxy",
-  "rea_portal_smod0_verified_pipeline": "composite_pipeline",
+  "rea_portal_parallel_scrape": "cli_exec",
+  "rea_portal_form_and_api_sniffer": "cli_exec",
+  "rea_portal_llms_txt_and_sitemap_harvester": "cli_exec",
+  "rea_portal_openapi_and_status_probe": "cli_exec",
+  "rea_portal_smod0_verified_pipeline": "rule_validator",
   "gpu_cloudflare_workers_ai_infer": "gpu_compute"
 }
 
@@ -308,6 +308,7 @@ def dispatch_universal_tool(tool_name: str, arguments: dict) -> dict:
                 "cutter": "https://cutter-mcp-forever.forested-lung.workers.dev/mcp",
                 "rea": "https://rea-mcp-forever.forested-lung.workers.dev/mcp",
                 "rea_portal": "https://rea-portal-mcp-forever.forested-lung.workers.dev/mcp",
+                "scrapling": "https://scrapling-mcp-forever.forested-lung.workers.dev/mcp",
             },
             "payload_json": arguments.get("payload_json", "{}"),
         }
